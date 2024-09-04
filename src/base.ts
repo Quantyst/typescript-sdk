@@ -1,4 +1,4 @@
-import { BaseParams, BuildUrlParams } from '../types/types';
+import { BaseParams, BuildUrlParams } from './types/types';
 
 export abstract class BaseService {
 
