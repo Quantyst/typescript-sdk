@@ -4,8 +4,33 @@
   "description": "Quantyst JS SDK",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c"
   },
   "keywords": [],
-  "author": "Justin Formentin"
+  "author": "Justin Formentin",
+  "devDependencies": {
+    "@babel/preset-env": "^7.25.3",
+    "@babel/preset-typescript": "^7.24.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.7",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.20.0",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.4"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/exports/index.d.ts",
+      "node": {
+        "types": "./dist/exports/index.d.ts",
+        "import": "./dist/node.mjs",
+        "require": "./dist/node.cjs"
+      },
+      "import": "./dist/index.mjs"
+    }
+  },
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts"
 }

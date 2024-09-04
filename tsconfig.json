@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "module": "ESNext",
+      "moduleResolution": "Bundler",
+      "target": "ES2021",
+      "allowJs": false,
+      "declaration": true,
+      "removeComments": false,
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true
+    },
+    "include": ["src"]
+  }
