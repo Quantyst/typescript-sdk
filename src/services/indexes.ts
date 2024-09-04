@@ -9,7 +9,7 @@ import {
   } from '../types';
 
 export class Indexes extends BaseService {
-  path: string;
+  private path: string;
   constructor(params: any) {
     super(params);
     this.path = 'audio/indexes/';

@@ -37,6 +37,7 @@ export class Search extends BaseService {
     const url = this.buildUrl(
       'audio/indexes/{index_id}/search/?query={query}',
       {
+        index_id: params.indexId,
         query: params.query,
       }
     );

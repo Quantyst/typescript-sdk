@@ -12,7 +12,7 @@ import {
 } from '../types';
 
 export class Triggers extends BaseService {
-  path: string;
+  private path: string;
   constructor(params: any) {
     super(params);
     this.path = 'audio/word-triggers/';

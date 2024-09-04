@@ -10,7 +10,7 @@ import {
 
 // export class Transcripts extends BaseService {
 export class Transcripts extends BaseService {
-  path: string;
+  private path: string;
   constructor(params: any) {
     super(params);
     this.path = 'audio/transcripts/';
@@ -38,9 +38,7 @@ export class Transcripts extends BaseService {
    *
    *  The SDK has a built in waiting implementation, so calling the transcription method alone will return the finished transcript.
    */
-  async create(
-    params: CreateAudioTranscriptRequest
-  ): Promise<AudioTranscript> {
+  async create(params: CreateAudioTranscriptRequest): Promise<AudioTranscript> {
     const body: CreateAudioTranscriptRequest$Internal = {
       file_url: params.fileUrl,
       index_id: params.indexId,
