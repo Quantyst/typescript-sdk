@@ -1,10 +1,10 @@
 import { BaseService } from '../base';
 import {
+  AudioMessage,
   GenerateMessageRequest,
   GetMessagesResponse,
   GetMessagesRequest,
-} from '../types/operations';
-import { AudioMessage } from '../types/components';
+} from '../types';
 
 export class Messages extends BaseService {
   constructor(params: any) {

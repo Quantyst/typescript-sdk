@@ -1,12 +1,12 @@
 import { BaseService } from '../base';
 import {
+    AudioIndex,
     GetAudioIndexesResponse,
     GetAudioIndexRequest,
     CreateAudioIndexRequest,
     UpdateAudioIndexRequest,
     DeleteAudioIndexRequest,
-  } from '../types/operations';
-  import { AudioIndex } from '../types/components';
+  } from '../types';
 
 export class Indexes extends BaseService {
   path: string;

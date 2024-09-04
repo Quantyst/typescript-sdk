@@ -1,7 +1,3 @@
-declare const __brand: unique symbol;
-
-export type Unrecognized<T> = T & { [__brand]: "unrecognized" };
-
 export type ClosedEnum<T> = T[keyof T];
 
 export const ProcessingStatus = {
@@ -19,3 +15,8 @@ export type BaseParams = {
 };
 
 export type BuildUrlParams = Partial<Record<string, string | number>>;
+
+export interface QuantystParams {
+  apiKey: string;
+  baseUrl?: string;
+}

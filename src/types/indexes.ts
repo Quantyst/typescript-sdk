@@ -1,7 +1,17 @@
-import * as components from './components';
+import { ProcessingStatus } from './types';
+
+export interface AudioIndex {
+  name?: string | undefined;
+  description?: string | undefined;
+  processingStatus?: ProcessingStatus | undefined;
+  id?: string | undefined;
+  accountId?: string | undefined;
+  createdAt?: string | undefined;
+  updatedAt?: string | undefined;
+}
 
 export interface GetAudioIndexesResponse {
-  results?: Array<components.AudioIndex> | undefined;
+  results?: Array<AudioIndex> | undefined;
 }
 
 export interface GetAudioIndexRequest {
@@ -19,17 +29,4 @@ export interface UpdateAudioIndexRequest extends CreateAudioIndexRequest {
 
 export interface DeleteAudioIndexRequest {
   indexId: string;
-}
-
-export interface GetMessagesRequest {
-  indexId: string;
-}
-
-export interface GetMessagesResponse {
-  results?: Array<components.AudioMessage> | undefined;
-}
-
-export interface GenerateMessageRequest {
-  indexId: string;
-  prompt: string;
 }
