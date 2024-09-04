@@ -1,4 +1,4 @@
-import { BaseParams, BuildUrlParams } from './types/types';
+import { BaseParams, BuildUrlParams } from './types';
 
 export abstract class BaseService {
 
@@ -35,7 +35,7 @@ export abstract class BaseService {
     return response.json() as Promise<T>;
   }
 
-  buildUrl(pathPattern: string, params: BuildUrlParams): string {
+  protected buildUrl(pathPattern: string, params: BuildUrlParams): string {
     const paramRE = /\{([a-zA-Z0-9_]+?)\}/g;
 
     return pathPattern.replace(paramRE, function (_, placeholder) {
