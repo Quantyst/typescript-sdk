@@ -14,3 +14,13 @@ export type AudioIndex = {
     createdAt?: string | undefined;
     updatedAt?: string | undefined;
 };
+
+export type AudioMessage = {
+    accountId?: string | undefined;
+    indexId?: string | undefined;
+    id?: string | undefined;
+    prompt?: string | undefined;
+    response?: string | undefined;
+    createdAt?: string | undefined;
+    updatedAt?: string | undefined;
+  };

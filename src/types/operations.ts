@@ -15,3 +15,15 @@ export interface UpdateAudioIndexRequest extends CreateAudioIndexRequest {
 export type DeleteAudioIndexRequest = {
     indexId: string;
 };
+export type GetMessagesRequest = {
+    indexId: string;
+  };
+  
+  export type GetMessagesResponse = {
+    results?: Array<components.AudioMessage> | undefined;
+  };
+  
+  export type GenerateMessageRequest = {
+    indexId: string;
+    prompt: string;
+  };
